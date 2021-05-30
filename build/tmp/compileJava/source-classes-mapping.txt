@@ -2,8 +2,14 @@ com/wasinapl/elasticsearch/entitiy/Car.java
  com.wasinapl.elasticsearch.entitiy.Car
 com/wasinapl/elasticsearch/api/server/CarApi.java
  com.wasinapl.elasticsearch.api.server.CarApi
+com/wasinapl/elasticsearch/repository/CarElasticRepository.java
+ com.wasinapl.elasticsearch.repository.CarElasticRepository
+com/wasinapl/elasticsearch/common/WebClientConfig.java
+ com.wasinapl.elasticsearch.common.WebClientConfig
 com/wasinapl/elasticsearch/entitiy/Engine.java
  com.wasinapl.elasticsearch.entitiy.Engine
+com/wasinapl/elasticsearch/ElasticsearchApplication.java
+ com.wasinapl.elasticsearch.ElasticsearchApplication
 com/wasinapl/elasticsearch/service/RandomCarService.java
  com.wasinapl.elasticsearch.service.RandomCarService
 com/wasinapl/elasticsearch/service/CarService.java
@@ -12,5 +18,7 @@ com/wasinapl/elasticsearch/entitiy/Tire.java
  com.wasinapl.elasticsearch.entitiy.Tire
 com/wasinapl/elasticsearch/util/RandomDateUtil.java
  com.wasinapl.elasticsearch.util.RandomDateUtil
-com/wasinapl/elasticsearch/ElasticsearchApplication.java
- com.wasinapl.elasticsearch.ElasticsearchApplication
+com/wasinapl/elasticsearch/common/ElasticsearchConfig.java
+ com.wasinapl.elasticsearch.common.ElasticsearchConfig
+com/wasinapl/elasticsearch/common/CarElasticDataSource.java
+ com.wasinapl.elasticsearch.common.CarElasticDataSource

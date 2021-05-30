@@ -14,6 +14,7 @@ public class ElasticsearchConfig extends AbstractElasticsearchConfiguration {
                 ClientConfiguration
                         .builder()
                         .connectedTo("localhost:9200")
+                        .withSocketTimeout(10000000)
                         .build();
         return RestClients.create(clientConfiguration).rest();
     }
