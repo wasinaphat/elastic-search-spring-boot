@@ -11,14 +11,20 @@ sourceCompatibility = '11'
 repositories {
 	mavenCentral()
 }
+ext{
+	set('apacheCommonsLang3Version',"3.10")
+}
 
 dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation "org.apache.commons:commons-lang3:${apacheCommonsLang3Version}"
 	implementation 'org.springframework.boot:spring-boot-starter-data-elasticsearch'
+
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-//	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	implementation 'org.springframework.boot:spring-boot-devtools'
+
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 

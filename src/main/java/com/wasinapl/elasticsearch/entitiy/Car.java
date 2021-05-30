@@ -8,6 +8,11 @@ import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import lombok.*;
 import lombok.experimental.Accessors;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.elasticsearch.annotations.DateFormat;
+import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -20,7 +25,11 @@ import java.util.List;
 @Data
 @ToString
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
+@Document(indexName = "practical-java")
 public class Car {
+
+    @Id
+    private String id;
 
     private String brand;
 
@@ -32,7 +41,8 @@ public class Car {
 
     private  boolean available;
 
-    @JsonFormat(pattern = "dd-MMM-yyyy",timezone = "Asia/Jakarta")
+    @Field(type = FieldType.Date,format = DateFormat.date)
+    @JsonFormat(pattern = "yyyy-MM-dd",timezone = "Asia/Jakarta")
     private LocalDate firstReleaseDate;
 
     @JsonInclude(value = JsonInclude.Include.NON_EMPTY)
