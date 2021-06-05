@@ -37,7 +37,8 @@ public class CarElasticDataSource {
 
        var cars = new ArrayList<Car>();
 
-        for (int i = 0; i <100_000 ; i++) {
+        for (int i = 0; i <10_000 ; i++) {
+//            LOG.info("Processing add cars to elasticsearch  no : {}  car:{}",i,cars.get(i));
             cars.add(carService.generateCar());
 
         }
